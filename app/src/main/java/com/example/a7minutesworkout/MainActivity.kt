@@ -1,5 +1,6 @@
 package com.example.a7minutesworkout
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,13 +19,10 @@ class MainActivity : AppCompatActivity() {
         // start button
         flStartButton = binding.flStart
         flStartButton.setOnClickListener{
-            Toast.makeText(
-                this,
-                "Here we will start our exercise",
-                Toast.LENGTH_SHORT
-            ).show()
+            val intent : Intent = Intent(this,ExerciseActivity::class.java)
+            startActivity(intent)
         }
     }
 
-    
+
 }
